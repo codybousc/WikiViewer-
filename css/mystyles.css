@@ -1,0 +1,49 @@
+body {
+  background-color: #DEDEDE;
+}
+
+.container {
+  margin-top: 100px;
+  padding-left: 5%;
+  background-color: white;
+}
+
+.postersPhoto {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+}
+
+.allCamperPosts {
+   float: left;
+   margin: .35%;
+}
+
+.detailsSpace {
+  height: 200px;
+  width: 250px;
+  background-color: white;
+  margin-top: 5px;
+}
+
+.userName {
+  font-size: 20px;
+  color: black;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.userName:hover {
+  font-size: 22px;
+  text-decoration: none;
+
+}
+
+.thuminIt {
+  height: 25px;
+  float: bottom;
+
+}
