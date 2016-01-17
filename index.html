@@ -8,17 +8,25 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
   <body>
-<div class="container">
+<div class="jumbotron">
+  <h1 class="display-3">Wiki Viewer</h1>
+  <p class="lead">Search for Somethin'</p>
+
+</div>
+
+<div class="searchContainer center-block text-center">
   <form>
-    <input type="text" class="form-control col-lg-8 col-md-8 col-sm-8" placeholder="Text input" ng-model="searchTerm">
-    <button type="submit" class="btn btn-default" ng-click="setQuery(); makeAPICall(); ">Search</button>
+    <input type="text" class="form-control col-lg-8 col-md-8 col-sm-8 center-block" placeholder="Query" ng-model="searchTerm">
+    <div class="btn-group" role="group">
+      <button type="submit" class="btn btn-default" ng-click=" makeAPICall() ">Search</button>
+    </div>
+
   </form>
 </div>
 
 <div class="container" ng-repeat="(key, value) in responseDataArray">
-
-  {{value.headline}} <br><br>
-  {{value.description}}
+  <h3 class="headline"><a href="{{value.links}}">{{value.headline}}</a></h3> <br><br>
+  <span class="description">{{value.description}}</span>
 </div>
 
   <script src="bower_components/angular/angular.js"></script>
