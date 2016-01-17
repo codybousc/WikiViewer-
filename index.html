@@ -8,8 +8,15 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
   <body>
+<div class="container">
+  <form>
+    <input type="text" class="form-control col-lg-8 col-md-8 col-sm-8" placeholder="Text input" ng-model="searchTerm">
+    <button type="submit" class="btn btn-default" ng-click="setQuery(); makeAPICall(); ">Search</button>
+  </form>
+</div>
 
 <div class="container" ng-repeat="(key, value) in responseDataArray">
+
   {{value.headline}} <br><br>
   {{value.description}}
 </div>
